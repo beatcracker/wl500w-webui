@@ -31,11 +31,11 @@ websWrite(wp, "<meta http-equiv=\"refresh\" content=\"0; url=http://%s/%s\">\r\n
 
 All we need is to search and replace this string in the `httpd` binary:
 
-* `content="0; url=http://%s/%s"`
+	content="0; url=http://%s/%s"
 
 -- with --
 
-* `content="0;      url=//%s/%s"`
+	content="0;      url=//%s/%s"
 
 
 ### Multi-user login restriction
