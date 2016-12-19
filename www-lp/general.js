@@ -2947,12 +2947,13 @@ link = window.open(tourl, "RemoteMonitor",
 else if (s=='x_FIsAnonymous' || s=='x_FIsSuperuser')
 {
 urlstr = location.href;
-url = urlstr.indexOf("http://");
+urlproto = location.protocol + '//';
+url = urlstr.indexOf(urlproto);
 port = document.form.usb_ftpport_x.value;
 if (url == -1) urlpref = LANIP;
 else
 {
-urlstr = urlstr.substring(7, urlstr.length);
+urlstr = urlstr.substring(urlproto.length, urlstr.length);
 url = urlstr.indexOf(":");
 if (url!=-1)
 {
@@ -3670,7 +3671,7 @@ inputRCtrl1(frm.wan_wimax_restart, 1);
 }
 function getCmdExecUrl( host, cmd )
 {
-return	"http://" + host +
+return location.protocol + "//" + host +
 "/apply.cgi?current_page=syscmd_out.asp&action_mode=+Refresh+&SystemCmd=" + encodeURIComponent( cmd );
 }
 function getHTTPRequest( url, func_res, func_fail )

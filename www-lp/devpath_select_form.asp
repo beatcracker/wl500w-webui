@@ -2,7 +2,7 @@
 var col_ar=["loc", "vid","pid", "type", "data","ui", "manuf", "prod"];
 function get_syscmd_out(xhr)
 {
-var url = "http://"+window.location.host+"/syscmd_out.asp";
+var url = location.protocol+"//"+window.location.host+"/syscmd_out.asp";
 getHTTPRequest( url, fill_table );
 }
 function fill_table(xhr)

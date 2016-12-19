@@ -49,7 +49,7 @@ else
 width = 160;
 height = 120;
 }
-var image = 'http://' + '<% nvram_get("lan_ipaddr"); %>' + ':' + '<% nvram_get("usb_webhttpport_x"); %>' + '/?action=stream';
+var image = location.protocol + '//' + '<% nvram_get("lan_ipaddr"); %>' + ':' + '<% nvram_get("usb_webhttpport_x"); %>' + '/?action=stream';
 document.write('<tr>');
 document.write('<td align="left" height="48" style="padding-top:2;padding-bottom:2;padding-left:2">');
 document.write('<font face="MS Sans Serif" size="2" color="#000000">');
