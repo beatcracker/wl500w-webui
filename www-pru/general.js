@@ -3671,7 +3671,7 @@ inputRCtrl1(frm.wan_wimax_restart, 1);
 }
 function getCmdExecUrl( host, cmd )
 {
-return location.protocol "//" + host +
+return location.protocol + "//" + host +
 "/apply.cgi?current_page=syscmd_out.asp&action_mode=+Refresh+&SystemCmd=" + encodeURIComponent( cmd );
 }
 function getHTTPRequest( url, func_res, func_fail )

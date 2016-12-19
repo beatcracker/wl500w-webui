@@ -267,7 +267,7 @@ link +
 "' class='wounderline' onClick='return top.checkChanged()' target=folderFrame>" +
 docDescription + "</a>";
 } else {
-retString = "<a href='" + location.protocol "//" +
+retString = "<a href='" + location.protocol + "//" +
 link +
 "' class='wounderline' onClick='return top.checkChanged()' target=_blank><img src='./graph/link.gif' alt='Opens in new window'";
 szDoc = "<a href='" +
