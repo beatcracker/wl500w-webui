@@ -70,9 +70,9 @@ It can be achieved by `NOP`ing conditional jump at file offset `0x2CF0`. Just fi
 
 To use modified files/folder you need to attach properly formatted USB flash drive to your router. This is usually done as a part of [Entware installation](https://github.com/Entware-ng/Entware-ng/wiki).
 
-Since `web-iu` and `httpd` are stored in the readonly file system, the trick is to use [bind mounts](http://unix.stackexchange.com/questions/198590/what-is-a-bind-mount) to override built-in files.
+Since `wwww` folder and `httpd` binary are stored in the readonly file system, the trick is to use [bind mounts](http://unix.stackexchange.com/questions/198590/what-is-a-bind-mount) to override built-in files.
 
-Assuming that you've copied `httpd` to `/opt/sbin/httpd` and files from `web-ui` to `/var/www`:
+Assuming that you've copied `httpd` to `/opt/sbin/httpd` and `www-xxx` to `/var/www`:
 
 ```shell
 mount -o bind /opt/sbin/httpd /usr/sbin/httpd
