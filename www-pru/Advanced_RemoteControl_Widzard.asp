@@ -23,7 +23,8 @@ NAT = '<% nvram_get("wan_nat_x"); %>'
 aspName = "/ShowWebCam.asp";
 LANIP = '<% nvram_get("lan_ipaddr"); %>'
 urlstr = location.href;
-url = urlstr.indexOf("http://");
+urlproto = location.protocol + '//';
+url = urlstr.indexOf(urlproto);
 if (url==-1) urlpref = LANIP;
 else
 {
@@ -54,21 +55,21 @@ port5 = R5.indexOf(":");
 if (port5!=-1) R5=R5.substring(url);
 port6 = R6.indexOf(":");
 if (port6!=-1) R6=R6.substring(url);
-HREF1="http://" + urlpref + R1 + aspName;
-HREF2="http://" + urlpref + R2 + aspName;
-HREF3="http://" + urlpref + R3 + aspName;
-HREF4="http://" + urlpref + R4 + aspName;
-HREF5="http://" + urlpref + R5 + aspName;
-HREF6="http://" + urlpref + R6 + aspName;
+HREF1=urlproto + urlpref + R1 + aspName;
+HREF2=urlproto + urlpref + R2 + aspName;
+HREF3=urlproto + urlpref + R3 + aspName;
+HREF4=urlproto + urlpref + R4 + aspName;
+HREF5=urlproto + urlpref + R5 + aspName;
+HREF6=urlproto + urlpref + R6 + aspName;
 }
 else
 {
-HREF1="http://" + R1 + aspName;
-HREF2="http://" + R2 + aspName;
-HREF3="http://" + R3 + aspName;
-HREF4="http://" + R4 + aspName;
-HREF5="http://" + R5 + aspName;
-HREF6="http://" + R6 + aspName;
+HREF1=urlproto + R1 + aspName;
+HREF2=urlproto + R2 + aspName;
+HREF3=urlproto + R3 + aspName;
+HREF4=urlproto + R4 + aspName;
+HREF5=urlproto + R5 + aspName;
+HREF6=urlproto + R6 + aspName;
 }
 if (R4=="" && R5=="" && R6=="")
 document.write('<frameset frameborder="0" rows="*">');

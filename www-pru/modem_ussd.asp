@@ -1,6 +1,6 @@
 <html><head><title>WL500W Web Manager</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="style.css" media="screen"><script type="text/javascript" src="overlib.js"></script><script type="text/javascript" src="general.js"></script><script type="text/javascript">function get_syscmd_out(xhr)
 {
-var url = "http://"+window.location.host+"/syscmd_out.asp";
+var url = location.protocol+"//"+window.location.host+"/syscmd_out.asp";
 var ifrm = document.getElementById("outIframe");
 ifrm.src=url;
 }
