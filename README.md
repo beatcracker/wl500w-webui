@@ -89,3 +89,8 @@ umount /www
 ```
 
 To make changes permanent, you need to create shell script and run it from the `cron` at boot.
+
+# Example
+
+* Script: [https-webui.sh](https-webui.sh)
+* Crontab: `@reboot admin /path/to/https-webui.sh`
